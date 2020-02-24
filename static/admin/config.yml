@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: master
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dvfbk5hsh
+    api_key: 371112618454942
+collections:
+  - label: Configuration
+    name: configuration
+    delete: false
+    files:
+      - name: generalConfiguration
+        label: "General Configuration"
+        file: static/assets/config.md
+        delete: false
+        fields:
+          - { name: aboutText, label: "About Text", widget: string, require: true }
+          - { name: aboutImage, label: "About Image", widget: string, require: true }
+          - { name: mainImage, label: "Main Image", widget: string, require: true }
+
+

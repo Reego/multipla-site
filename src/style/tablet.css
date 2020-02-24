@@ -85,7 +85,59 @@
     body {
     }
 
+    /* Footer */
+
     .footer {
         margin:0 auto;
+    }
+
+    .footerColumn {
+        display:inline-block;
+        width:49%;
+    }
+
+    .footerColumn h1 {
+        text-indent:5vw;
+    }
+
+    .footerColumn ul li {
+        padding:10px 50px 10px 20px;
+        font-size:18px;
+    }
+
+    .footerColumn ul li:hover {
+        background-color:#2a2a2a;
+        text-indent:10px;
+    }
+
+    .footerColumn p {
+        font-family:'Roboto';
+        text-align:left;
+        padding:10px 50px 10px 20px;
+        /*margin-right:50px;*/
+    }
+
+
+    .footerContact > div {
+        width:auto;
+    }
+
+    .footerContact .labels {
+        width:300px;
+        text-indent:10px;
+        margin-left:5vw;
+    }
+
+    .footerBottom p {
+        font-size:16px;
+    }
+
+    .footerBottom .data {
+        width:30%;
+    }
+
+    .footerBottom h1 {
+        margin-left:.5vw;
+        text-indent:5vw;
     }
 }

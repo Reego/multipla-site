@@ -1,0 +1,32 @@
+ok so these will be configurable:
+
+  services:
+    each service will have its designated link in the navigation
+    each service will have its dedicated description card on the front page
+    each service will have a title field as well, which is the same as the text shown in the link
+
+  home
+    display image
+    display text title
+    display text
+    display button <- probably not actually
+
+    services general description
+
+    services ^
+  about
+    display image
+    about description
+  contact
+    display image
+    contact description
+    contact description 2
+
+    contact info (phone numbers, emails) -- also used in footer
+
+  footer
+    abbrev. about description
+    contact info
+
+navigation will be dynamic
+home page will be dynamic

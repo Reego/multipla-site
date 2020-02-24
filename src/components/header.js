@@ -27,6 +27,11 @@ export default () => (
               <Link className='navItem' to='/contact'>contato</Link>
           </div>
           <div className='dropdownWrap'>
+              <div className='hamburger'>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
               <input type='checkbox'/>
               <div className='dropdown'>
                   <span>home</span>
