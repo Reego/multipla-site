@@ -1,0 +1,47 @@
+@media only screen and (min-width: 800px) {
+
+    .subBox .text {
+        display:block;
+        width:600px;
+        margin-left:auto;margin-right:0;
+        margin-top:150px;
+        font-size:25px;
+        color:rgba(0,0,0,.8);
+        font-family:'Raleway';
+        font-weight:600;
+        text-align:left;
+    }
+
+    .subBox .subText {
+        display:block;
+        width:400px;
+        margin-top:50px;
+        margin-left:auto;
+        margin-right:200px;
+        font-size:20px;
+        color:rgba(0,0,0,.9);
+        font-family:'Raleway';
+        font-weight:500;
+        text-align:left;
+    }
+
+    .subBox .button {
+        position:absolute;
+        display:inline-block;
+        padding:15px 10px;
+        background-color:rgba(255, 255, 255, .2);
+        font-weight:500;
+        color:rgba(0,0,0, .9);
+        font-size:18px;
+        margin-top:50px;
+        right:450px;
+        font-family:Roboto;
+        border:4px solid #111;
+        transition:.1s ease;
+    }
+
+    .subBox .button:hover {
+        background-color:rgba(0,0,0,.8);
+        color:rgba(255, 255, 255, .8);
+    }
+}

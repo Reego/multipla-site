@@ -1,0 +1,26 @@
+@media only screen and (min-width: 1000px) {
+
+    .siteTitle {
+        width:54%;
+        text-indent:20px;
+    }
+
+    .navWrap {
+        width:45%;
+        background-color:#f08446;
+        margin-left:.99%;
+        text-align:center;
+        border-top-right-radius:2px;
+        border-top-left-radius:2px;
+    }
+
+    .navWrap > .navItem {
+        margin:0;
+        color:#fff;
+    }
+
+    .navWrap > .navItem:hover {
+        color:#fff;
+        background-color:#E66921
+    }
+}

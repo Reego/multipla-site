@@ -1,0 +1,137 @@
+.formDescription {
+    width:100%;
+    margin:0 auto;
+    background-color:#444;
+    border-bottom:30px solid #222;
+}
+
+.formDescription > div {
+    overflow:hidden;
+    vertical-align:top;
+    display:inline-block;
+}
+
+.formDescriptionImage {
+    width:100%;
+    height:400px;
+/*    background-color:#ccc;*/
+    background-size:200% 200%;
+    background-repeat:no-repeat;
+    background:url('../images/mib.jpg');
+}
+
+.formDescriptionText {
+    display:none;
+    width:300px;
+    margin-left:50px;
+    line-height:0;
+    margin-top:50px; margin-bottom:0;
+}
+
+.formDescriptionText h1 {
+    font-family:'Raleway';
+    font-size:24px;
+    color:#ddd;
+    font-weight:500;
+    width:90%;
+    text-align:left;
+    margin-left:5vw;
+    margin-top:40px;
+}
+
+.formDescriptionText p {
+    font-family:'Roboto';
+    font-size:16px;
+    color:#ddd;
+    font-weight:300;
+    width:90%;
+    text-align:left;
+    margin-left:5vw;
+    margin-top:40px;
+}
+
+.formBreak {
+    height:50px;
+}
+
+.formBreakSmall {
+    height:20px;
+}
+
+
+.mainForm {
+    width:80%;
+    background-color:rgba(0,0,0,.1);
+    border-bottom:30px solid #222;
+    margin:0 auto;
+    padding:30px 20px;
+    color:#333;
+}
+
+.mainForm * {
+    margin-left:50px;
+}
+
+.mainForm h1 {
+    font-size:30px;
+    font-family:'Raleway';
+    font-weight:300;
+    color:rgba(0,0,0,.8);
+}
+
+.mainForm .textInput {
+    outline:none;
+    border:none;
+    background-color:rgba(255, 255, 255, .8);
+    font-size:16px;
+    border-left:3px solid #222;
+    padding-left:20px;
+    padding-top:10px;
+    min-width:70%;
+    padding-bottom:10px;
+    color:#222;
+}
+
+.mainForm textarea {
+    outline:none;
+    border:none;
+    background-color:rgba(255, 255, 255, .8);
+    font-size:16px;
+    border-left:3px solid #222;
+    padding-left:20px;
+    padding-top:10px;
+    min-width:70%;
+    padding-bottom:10px;
+    color:#222;
+    max-width:90%;
+}
+
+.mainForm .submitButton {
+    font-size:18px;
+    padding:20px 30px;
+    appearance:none;
+    background-color:#E66921;
+    color:#fff;
+    cursor:pointer;
+    transition:.1s ease;
+}
+
+.mainForm .submitButton:hover {
+    background-color:#f08446;
+    color:#f6f6f6;
+}
+
+.mainForm input::placeholder {
+    font-size:16px;
+}
+
+.formText {
+    font-size:18px;
+    font-family:'Roboto';
+    font-weight:300;
+}
+
+
+@media only screen and (min-width: 652px) {
+
+}

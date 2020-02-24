@@ -1,42 +1,43 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import { Link } from 'gatsby';
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default () => (
+  <div className='header'>
+      <div className='headerUpperDiv'>
+          <div>
+              <span>login</span>
+              <span>logout</span>
+          </div>
+      </div>
+      <div className='headerLowerDiv'>
+          <h1 className='bigfont siteTitle'><span><b>M</b>ULTIPLA</span></h1>
+          <div className='navWrap right'>
+              <Link className='navItem' to='/'>home</Link>
+              <span className='navItem dropdownNav'>
+                  <span className='navItem'>servicos</span>
+                  <div className='servicesDropdown'>
+                      <p>protecao patrimonial</p>
+                      <p>financeiros</p>
+                      <p>vida</p>
+                      <p>saude</p>
+                  </div>
+              </span>
+              <Link className='navItem' to='/about'>sobre nos</Link>
+              <Link className='navItem' to='/contact'>contato</Link>
+          </div>
+          <div className='dropdownWrap'>
+              <input type='checkbox'/>
+              <div className='dropdown'>
+                  <span>home</span>
+                  <span className='indent'>protecao patrimonial</span>
+                  <span className='indent'>financeiros</span>
+                  <span className='indent'>vida</span>
+                  <span className='indent'>saude</span>
+                  <span>sobre nos</span>
+                  <span>contato</span>
+              </div>
+          </div>
+      </div>
+  </div>
+);

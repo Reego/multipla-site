@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+html, body {
+    margin:0;
+}
+
+.bigfont {
+    font-family:'Raleway';
+    font-weight:400;
+}
+
+.hiddenText {
+    opacity:0;
+}
+
+.button {
+    cursor:pointer;
+}
+
+/* Header content */
+
+.header {
+    width:100vw;
+/*    border-bottom:20px solid rgba(,0,0,.1);*/
+}
+
+.headerUpperDiv {
+    display:none;
+    height:auto;
+}
+
+.headerUpperDiv > div {
+    margin:default;
+    text-align:right;
+}
+
+.headerLowerDiv {
+    display:block;
+    height:auto;
+    font-size:0;
+    border-bottom:1px solid rgba(0,0,0,.2);
+    /*text-align:right;*/
+}
+
+.headerLowerDiv.bordered {
+/*    border-bottom:2px solid #111;*/
+}
+
+.siteTitle {
+    width:49%;
+    font-size:30px;
+    display:inline-block;
+    text-indent:10px;
+}
+
+.navWrap {
+    /*display:none*/
+    display:none;
+}
+
+.navItem {
+    display:inline-block;
+    text-decoration:none;
+}
+
+.dropdownNav {
+    display:inline-block;
+}
+
+.dropdownNav > span {
+    display:inline;
+}
+
+.servicesDropdown {
+    position:absolute;
+    margin-top:29px;
+    /*margin-left:148px;*/
+    margin-left:-20px;
+    display:none;
+    transition:.1s ease;
+}
+
+.dropdownNav:hover .servicesDropdown {
+    display:block;
+}
+
+.servicesDropdown p {
+    text-align:left;
+    display:block;
+    color:#ddd;
+    font-size:16px;
+    padding:15px 20px;
+    background-color:#222;
+    margin:0;
+}
+
+.servicesDropdown p:hover {
+    background-color:#333;
+    color:#fff;
+}
+
+.dropdownWrap {
+    width:49%;
+    display:inline-block;
+    left:.5%;
+    text-align:right;
+    /*margin-left:5px;*/
+}
+
+.dropdown {
+    display:none;
+    position:fixed;
+    z-index:2;
+    font-size:16px;
+
+    color:#eee;
+    font-family:sans-serif;
+    font-weight:200;
+}
+
+.dropdown .indent {
+/*    text-indent:0px;*/
+}
+
+.dropdownWrap input {
+    position:relative;
+    display:inline-block;
+    height:35px;
+    width:35px;
+    background-color:red;
+
+    -webkit-appearance:none;
+    border-radius:0;
+    outline:none;
+    z-index:3;
+    top:10px;
+    cursor:pointer;
+}
+
+.dropdownWrap input:checked {
+    background-color:blue;
+}
+
+.dropdownWrap input:checked ~ .dropdown {
+    margin-top:28px;
+    position:absolute;
+    display:block;
+    left:0;
+    right:0;
+}
+
+.dropdown span {
+    display:block;
+    text-indent:10px;
+    font-size:20px;
+    text-align:left;
+    padding:10px 0;
+    background-color:#111;
+}
+
+.dropdown span:hover {
+    background-color:#222;
+    cursor:pointer;
+}
+
+.dropdown span.active {
+
+}
+
+/* Main content */
+
+.main {
+    padding-bottom:70px;
+}
+
+.mainDisplay {
+    background-color:#222;
+    padding-bottom:50px;
+}
+
+.mainDisplay .text {
+    font-size:18px;
+}
+
+.mainDisplay .br {
+    height:30px;
+    width:100%;
+    font-size:15px;
+}
+
+.mainBox {
+    display:block;
+    width:100%;
+    height:200px;
+    background-color:rgba(255,255,255,.3);
+}
+
+.mainBox.second {
+    margin-top:20px;
+}
+
+.subBox {
+    display:block;
+    width:100%;
+    height:600px;
+    background-color:rgba(255, 255, 255,.3);
+    overflow:hidden;
+    background:url('../images/cit-v.jpg');
+    background-size:cover;
+    text-align:center;
+}
+
+.subBox .text {
+    display:block;
+    width:100%;
+    margin-left:auto;margin-right:0;
+    margin-top:150px;
+    text-align:center;
+    font-size:25px;
+    color:rgba(0,0,0,.8);
+    font-family:'Raleway';
+    font-weight:600;
+}
+
+.subBox .subText {
+    display:block;
+    width:80%;
+    margin-top:50px;
+    margin-left:auto;
+    text-align:center;
+    margin-right:auto;
+    font-size:20px;
+    color:rgba(0,0,0,.9);
+    font-family:'Raleway';
+    font-weight:500;
+}
+
+.subBox .button {
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    padding:15px 10px;
+    background-color:rgba(255, 255, 255, .2);
+    font-weight:500;
+    color:rgba(0,0,0, .9);
+    font-size:18px;
+    margin-top:50px;
+    font-family:Roboto;
+    border:4px solid #111;
+    transition:.1s ease;
+}
+
+.subBox .button:hover {
+    background-color:rgba(0,0,0,.8);
+    color:rgba(255, 255, 255, .8);
+}
+
+/* Footer content */
+
+/*.footer * {
+    margin:0;
+}*/
+
+.footerUpperDiv {
+    background-color:#111;
+    padding:20px 0;
+    text-align:center;
+}
+
+.footerColumn {
+    width:49%;
+    display:inline-block;
+    font-size:18px;
+    color:#ccc;
+    vertical-align:top;
+    overflow:hidden;
+    font-family:'Roboto';
+}
+
+.footerColumn h1 {
+    text-align:left;
+    text-indent:5vw;
+    font-family:'Raleway';
+    font-weight:400;
+}
+
+.footerColumn ul {
+    text-align:left;
+    list-style:none;
+    padding:0;
+    margin-left:40px;
+}
+
+.footerColumn ul li {
+    text-indent:0;
+    display:inline-block;
+    padding:10px 50px 10px 20px;
+    cursor:pointer;
+    transition:.1s ease;
+    font-family:'Roboto';
+}
+
+.footerColumn p {
+    margin-top:50px;
+    width:80%;
+    margin-left:10%;
+    text-align:right;
+    font-size:18px;
+    color:#ccc;
+    font-weight:300;
+}
+
+.footerColumn ul li:hover {
+    background-color:#2a2a2a;
+    text-indent:10px;
+}
+.footerColumn:last-child h1 {
+    /*text-align:right;*/
+    /*margin-left:0;*/
+    /*margin-right:5vw;*/
+}
+
+.footerColumn:last-child p {
+    font-family:'Roboto';
+    text-align:left;
+    padding:10px 50px 10px 20px;
+    /*margin-right:50px;*/
+}
+
+.footerUpperDiv .footerBottom {
+    color:#ddd;
+    padding:30px 0;
+    text-align:left;
+}
+
+.footerContact {
+    background-color:rgba(0, 0, 0, .5);
+    padding:30px 0;
+}
+
+.footerContact > div {
+    margin-left:5vw;
+    display:inline-block;
+    width:20%;
+    vertical-align:top;
+    overflow:hidden;
+}
+
+.footerBottom h1 {
+    text-align:left;
+    margin-left:.5vw;
+    text-indent:5vw;
+    font-size:22px;
+    font-family:'Raleway';
+    font-weight:400;
+    color:#ccc;
+}
+
+.footerBottom p {
+    text-align:left;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:16px;
+}
+
+.footerContact > .labels {
+    width:15%;
+    text-indent:60px;
+    margin-left:1vw;
+    font-weight:600;
+}
+
+.labels p {
+    font-weight:400;
+    color:#ccc;
+}
+
+.footerLowerDiv {
+    height:80px;
+    background-color:#111;
+}
+
+.footerLowerDiv p {
+    text-align:center;
+    font-family:'Roboto';
+    font-weight:400;
+    color:rgba(255, 255, 255, .5);
+    font-size:14px;
+    margin:0;
+    line-height:40px;
+}

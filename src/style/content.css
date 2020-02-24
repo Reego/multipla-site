@@ -1,0 +1,127 @@
+.home .mainContent {
+    margin-top:100px;
+}
+
+.mainContent .contentTitle {
+    font-family:'Raleway';
+    font-weight:400;
+    font-size:26px;
+    margin-left:2.5vw;
+    text-indent:5vw;
+    background-color:#E66921;
+    padding:5px 0;
+    color:#fff;
+    width:60%;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:10px;
+    border-bottom:1px solid rgba(0,0,0,.2);
+/*    border-bottom-left-radius:10px;
+    border-top-left-radius:px;*/
+}
+
+.mainContent .contentDescription {
+    font-family:'Roboto';
+    font-size:18px;
+    color:#222;
+    font-weight:300;
+    width:90%;
+    margin-left:5vw;
+    margin-top:40px;
+}
+
+.mainContentServices {
+    margin-top:50px;
+    font-size:0;
+    text-align:center;
+}
+
+.serviceBox {
+    display:inline-block;
+    width:100%;
+    margin-top:1px;
+/*    border-left:20px solid #E66921;*/
+    background-color:rgba(0,0,0,.1);
+    /*border-bottom:30px solid #222;*/
+    overflow:none;
+    vertical-align:top;
+
+}
+
+.serviceBox h1 {
+    font-size:22px;
+    font-family:'Raleway';
+    color:#222;
+    margin-top:30px;
+    font-weight:500;
+    padding-bottom:10px;
+    border-bottom:3px solid #E66921;
+}
+
+.serviceBox h1.left {
+    text-align:left;
+    margin-left:50px;
+}
+
+.serviceBox h1.right {
+    text-align:right;
+    margin-right:50px;
+}
+
+.serviceBox h1.left ~ p {
+    text-align:left;
+    margin-left:50px;
+    margin-right:100px;
+}
+
+.serviceBox h1.right ~ p {
+    text-align:left;
+    margin-right:50px;
+    margin-left:100px;
+}
+
+.serviceBox p {
+    font-size:18px;
+    font-family:'Roboto';
+    color:#111;
+    font-weight:300;
+    margin-top:50px;
+    margin-bottom:70px;
+}
+
+.serviceBoxBr {
+    display:none;
+    width:5%;
+}
+
+.serviceBoxLineBr {
+    display:none;
+    height:30px;
+}
+
+.contentBreak {
+    height:50px;
+}
+
+@media only screen and (min-width: 652px) {
+    .mainContent .contentTitle {
+        width:40%;
+    }
+    .mainContent .contentDescription {
+        width:70%;
+    }
+    .serviceBox {
+        display:inline-block;
+        width:90%;
+        border-left:20px solid #E66921;
+    }
+    .serviceBox h1 {
+        padding-bottom:0px;
+        border-bottom:none;
+    }
+    /*.serviceBoxBr {
+        display:inline-block;
+    }*/
+    .serviceBoxLineBr {
+        display:none;
+    }
+}

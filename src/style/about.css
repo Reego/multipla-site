@@ -1,0 +1,49 @@
+.aboutDescription {
+    width:100%;
+    margin:0 auto;
+    background-color:#444;
+    border-bottom:30px solid #222;
+}
+
+.aboutDescription > div {
+    overflow:hidden;
+    vertical-align:top;
+    display:inline-block;
+}
+
+.aboutDescriptionImage {
+    width:100%;
+    height:400px;
+/*    background-color:#ccc;*/
+    background-size:contain;
+    background-position:50px 100px;
+    background-repeat:no-repeat;
+    background:url('../images/mib.jpg');
+}
+
+.aboutDescriptionText {
+    display:none;
+    width:300px;
+    margin-left:50px;
+    line-height:0;
+    margin-top:50px; margin-bottom:0;
+}
+
+.aboutDescriptionText p {
+    font-family:'Roboto';
+    font-size:16px;
+    color:#ddd;
+    font-weight:300;
+    width:90%;
+    text-align:left;
+    margin-left:5vw;
+    margin-top:40px;
+}
+
+.aboutBreak {
+    height:50px;
+}
+
+.aboutBreakSmall {
+    height:20px;
+}
