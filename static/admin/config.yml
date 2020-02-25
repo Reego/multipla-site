@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Reego/multipla-site
   branch: master
 media_library:
   name: cloudinary
@@ -16,8 +17,23 @@ collections:
         file: static/assets/config.md
         delete: false
         fields:
+          - { name: homeDisplayTitle, label: "Home Display Title", widget: string, require: true }
+          - { name: homeDisplayText, label: "Home Display Text", widget: string, require: true }
+          - { name: homeDisplayImage, label: "Home Display Image", widget: image, require: true }
+          - { name: homeServicesTitle, label: "Home Services Title", widget: string, require: true }
+          - { name: homeServicesDescription, label: "Home Services Description", widget: string, require: true }
+          - label: "Services"
+            name: services
+            widget: list
+            fields:
+              - { name: serviceTitle, label: "Service Title", widget: string, require: true }
+              - { name: serviceDescription, label: "Service Description", widget: string, require: true }
+          - { name: aboutDisplayImage, label: "About Display Image", widget: image, require: true }
           - { name: aboutText, label: "About Text", widget: string, require: true }
-          - { name: aboutImage, label: "About Image", widget: string, require: true }
-          - { name: mainImage, label: "Main Image", widget: string, require: true }
+          - { name: contactDisplayImage, label: "Contact Display Image", widget: image, require: true }
+          - { name: contactText, label: "Contact Text", widget: string, require: true }
+          - { name: sentDisplayImage, label: "Sent Display Image", widget: image, require: true }
+          - { name: sentDisplayText, label: "Sent Display Text", widget: string, require: true }
+          - { name: footerText, label: "Footer Text", widget: string, require: true }
 
 

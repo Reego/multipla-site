@@ -30,3 +30,9 @@ ok so these will be configurable:
 
 navigation will be dynamic
 home page will be dynamic
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dvfbk5hsh
+    api_key: 371112618454942
