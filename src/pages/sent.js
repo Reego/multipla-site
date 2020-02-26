@@ -18,3 +18,18 @@ export default () => (
         <Page/>
     </Layout>
 );
+
+// {
+//   allFile(filter: {name: {eq: "config"}}) {
+//     edges {
+//       node {
+//         name
+//         childMarkdownRemark {
+//           frontmatter {
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

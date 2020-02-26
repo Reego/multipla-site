@@ -33,6 +33,14 @@ module.exports = {
         modulePath: `${__dirname}/src/cms.js`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `configuration`,
+        path: `${__dirname}/static/assets/config.md`,
+      },
+    },
+    `gatsby-transformer-remark`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
