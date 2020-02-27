@@ -47,7 +47,7 @@ const Header = (data) => {
           <div className='navWrap right'>
               <Link className='navItem' to='/'>home</Link>
               <span className='navItem dropdownNav'>
-                  <span className='navItem'>servicos</span>
+                  <span className='navItem'>servi&#x00E7os</span>
                   <div className='servicesDropdown'>
                       { servicesDropdownList }
                   </div>
