@@ -33,7 +33,7 @@ const Page = ({ data }) => {
             <div className='subBox' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}>
                 <p className='text'>{ displayTitle }</p>
                 <p className='subText'>{ displayText }</p>
-                <div className='button'>Servi&#x00E7os</div>
+                <div className='button'>Servi&#x00E7;os</div>
             </div>
         </div>
         <div style={{'marginTop':'70px'}}></div>
