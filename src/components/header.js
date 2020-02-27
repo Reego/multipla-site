@@ -52,7 +52,7 @@ const Header = (data) => {
                       { servicesDropdownList }
                   </div>
               </span>
-              <Link className='navItem' to='/sobre_nos'>sobre nos</Link>
+              <Link className='navItem' to='/sobre_nos'>sobre n&#xf3;s</Link>
               <Link className='navItem' to='/contato'>contato</Link>
           </div>
           <div className='dropdownWrap'>
@@ -65,7 +65,7 @@ const Header = (data) => {
               <div className='dropdown'>
                   <Link to='/'>home</Link>
                   { servicesMobileDropdownList }
-                  <Link to='/sobre_nos'>sobre nos</Link>
+                  <Link to='/sobre_nos'>sobre n&#xf3;s</Link>
                   <Link to='/contato'>contato</Link>
               </div>
           </div>

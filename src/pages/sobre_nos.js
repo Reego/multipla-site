@@ -17,7 +17,7 @@ const Page = ({ data }) => {
         <div className='aboutDescriptionImage' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}></div>
         </div>
         <div className='aboutBreak'></div>
-        <h1 className='contentTitle'>Sobre nos</h1>
+        <h1 className='contentTitle'>Sobre n&#xf3;s</h1>
         <p className='contentDescription'>{ text }</p>
     </div>
     );
