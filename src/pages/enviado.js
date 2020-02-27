@@ -12,7 +12,7 @@ const Page = ({ data }) => {
     return (
         <React.Fragment>
             <div className='mainDisplay'>
-                <div className='subBox' style={{background:"url('" + displayImage + ")'", backgroundSize:'cover'}}>
+                <div className='subBox' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}>
                     <p className='text'>Obrigado</p>
                     <p className='subText'>{subText}</p>
                 </div>

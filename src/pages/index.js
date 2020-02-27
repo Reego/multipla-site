@@ -30,7 +30,7 @@ const Page = ({ data }) => {
     return (
     <React.Fragment>
         <div className='mainDisplay'>
-            <div className='subBox' style={{background:"url('" + displayImage + ")'", backgroundSize:'cover'}}>
+            <div className='subBox' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}>
                 <p className='text'>{ displayTitle }</p>
                 <p className='subText'>{ displayText }</p>
                 <div className='button'>Servicos</div>

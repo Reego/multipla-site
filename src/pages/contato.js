@@ -14,7 +14,7 @@ const Page = ({ data }) => {
     return (
     <div className='mainContent'>
         <div className='formDescription'>
-            <div className='formDescriptionImage' style={{background:"url('" + displayImage + ")'", backgroundSize:'cover'}}></div>
+            <div className='formDescriptionImage' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}></div>
         </div>
         <div className='formBreak'></div>
         <h1 className='contentTitle'>Contata-nos</h1>
