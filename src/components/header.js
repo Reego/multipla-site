@@ -1,15 +1,47 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
-export default () => (
+const query = graphql`
+{
+  allFile(filter: {name: {eq: "config"}}) {
+    edges {
+      node {
+        name
+        childMarkdownRemark {
+          frontmatter {
+            services {
+                serviceTitle
+            }
+          }
+        }
+      }
+    }
+  }
+}`;
+
+const Header = (data) => {
+    const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
+
+    const services = frontmatter['services'];
+
+    const servicesDropdownList = [];
+    const servicesMobileDropdownList = [];
+
+    for(let i = 0; i < services.length; i++) {
+        const service = services[i];
+
+        servicesDropdownList.push(
+            <Link to={'/#servico_' + i} key={i}>{service['serviceTitle']}</Link>
+        );
+
+        servicesMobileDropdownList.push(
+            <Link to={'/#servico_' + i} key={i} className='indent'>{service['serviceTitle']}</Link>
+        );
+    }
+
+  return (
   <div className='header'>
-      <div className='headerUpperDiv'>
-          <div>
-              <span>login</span>
-              <span>logout</span>
-          </div>
-      </div>
       <div className='headerLowerDiv'>
           <h1 className='bigfont siteTitle'><span><b>M</b>ULTIPLA</span></h1>
           <div className='navWrap right'>
@@ -17,14 +49,11 @@ export default () => (
               <span className='navItem dropdownNav'>
                   <span className='navItem'>servicos</span>
                   <div className='servicesDropdown'>
-                      <p>protecao patrimonial</p>
-                      <p>financeiros</p>
-                      <p>vida</p>
-                      <p>saude</p>
+                      { servicesDropdownList }
                   </div>
               </span>
-              <Link className='navItem' to='/about'>sobre nos</Link>
-              <Link className='navItem' to='/contact'>contato</Link>
+              <Link className='navItem' to='/sobre_nos'>sobre nos</Link>
+              <Link className='navItem' to='/contato'>contato</Link>
           </div>
           <div className='dropdownWrap'>
               <div className='hamburger'>
@@ -34,15 +63,21 @@ export default () => (
               </div>
               <input type='checkbox'/>
               <div className='dropdown'>
-                  <span>home</span>
-                  <span className='indent'>protecao patrimonial</span>
-                  <span className='indent'>financeiros</span>
-                  <span className='indent'>vida</span>
-                  <span className='indent'>saude</span>
-                  <span>sobre nos</span>
-                  <span>contato</span>
+                  <Link to='/'>home</Link>
+                  { servicesMobileDropdownList }
+                  <Link to='/sobre_nos'>sobre nos</Link>
+                  <Link to='/contato'>contato</Link>
               </div>
           </div>
       </div>
   </div>
-);
+  );
+};
+
+
+export default () => (
+  <StaticQuery
+    query={query}
+    render={Header}
+  />
+)

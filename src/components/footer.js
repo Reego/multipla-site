@@ -1,6 +1,29 @@
 import React from 'react';
 
-export default () => (
+import { StaticQuery, graphql } from 'gatsby';
+
+const query = graphql`
+{
+  allFile(filter: {name: {eq: "config"}}) {
+    edges {
+      node {
+        name
+        childMarkdownRemark {
+          frontmatter {
+              footerText
+          }
+        }
+      }
+    }
+  }
+}`;
+
+const Footer = (data) => {
+  const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
+
+  const text = frontmatter['footerText'];
+
+  return (
   <div className='footer'>
       <div className='footerUpperDiv'>
           <div className='footerColumn'>
@@ -14,7 +37,7 @@ export default () => (
               </ul>
           </div>
           <div className='footerColumn'>
-              <p>Multipla e um companhia que oferece servicios financeros e de investimento para que voce possa realizar os seus sonhos sem surpresas</p>
+              <p>{text}</p>
           </div>
           <div className='footerBottom'>
               <div className='footerContact'>
@@ -34,7 +57,15 @@ export default () => (
           </div>
       </div>
       <div className='footerLowerDiv'>
-          <p>Copyright Multipla 2020</p>
+          <p>Copyright © 2020 Multipla Todos os direitos reservados.</p>
       </div>
   </div>
-);
+  );
+};
+
+export default () => (
+  <StaticQuery
+    query={query}
+    render={Footer}
+  />
+)
