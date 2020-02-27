@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 const query = graphql`
 {
@@ -29,11 +29,11 @@ const Footer = (data) => {
           <div className='footerColumn'>
               <h1>Quick Links</h1>
               <ul>
-                  <li>home</li>
+                  <Link to='/'><li>home</li></Link>
                   <br/>
-                  <li>sobre nos</li>
+                  <Link to='/sobre_nos'><li>sobre nos</li></Link>
                   <br/>
-                  <li>contato</li>
+                  <Link to='/contato'><li>contato</li></Link>
               </ul>
           </div>
           <div className='footerColumn'>
