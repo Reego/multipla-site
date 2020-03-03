@@ -5,7 +5,7 @@
 .mainContent .contentTitle {
     font-family:'Raleway';
     font-weight:400;
-    font-size:26px;
+    font-size:22px;
     margin-left:2.5vw;
     text-indent:5vw;
     background-color:#E66921;
@@ -101,6 +101,19 @@
 .contentBreak {
     height:50px;
 }
+
+@media only screen and (min-width: 400px) {
+    .mainContent .contentTitle {
+        font-size:24px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .mainContent .contentTitle {
+        font-size:26px;
+    }
+}
+
 
 @media only screen and (min-width: 652px) {
     .mainContent .contentTitle {

@@ -31,13 +31,18 @@
 
 .aboutDescriptionText p {
     font-family:'Roboto';
-    font-size:16px;
     color:#ddd;
     font-weight:300;
     width:90%;
     text-align:left;
     margin-left:5vw;
     margin-top:40px;
+    font-size:18px;
+}
+
+.mainContent .aboutContentDescription {
+    font-size:20px;
+    line-height:25px;
 }
 
 .aboutBreak {

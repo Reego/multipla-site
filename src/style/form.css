@@ -85,6 +85,8 @@
     padding-top:10px;
     width:80%;
     margin:0 auto;
+    font-family:'Roboto';
+    font-weight:300;
 /*    margin-left:0;
     margin:0 auto;*/
     padding-bottom:10px;
@@ -105,6 +107,8 @@
     margin:0 auto;
     padding-bottom:10px;
     color:#222;
+    font-family:'Roboto';
+    font-weight:300;
 }
 
 .mainForm .submitButton {
@@ -132,7 +136,7 @@
     margin-left:5vw;
     font-size:18px;
     font-family:'Roboto';
-    font-weight:300;
+    font-weight:400;
 }
 
 

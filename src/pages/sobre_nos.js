@@ -18,7 +18,7 @@ const Page = ({ data }) => {
         </div>
         <div className='aboutBreak'></div>
         <h1 className='contentTitle'>Sobre n&#xf3;s</h1>
-        <p className='contentDescription'>{ text }</p>
+        <p className='contentDescription aboutContentDescription'>{ text }</p>
     </div>
     );
 };

@@ -48,10 +48,10 @@ const Footer = (data) => {
                       <p>telefone</p>
                   </div>
                   <div className='data'>
-                      <p>apenna@apmultipla.com.br</p>
-                      <p>cferraz@apmultipla.com.br</p>
-                      <p>+55 21 98899-4832</p>
-                      <p>+55 21 99988-3140</p>
+                      <p><span>apen</span>na<span>@apmultip</span><span>la.com.br</span></p>
+                      <p><span>cferra</span><span>z@apmultipl</span><span>a.com.br</span></p>
+                      <p><span>+55 21</span> 988<span>99-4832</span></p>
+                      <p><span>+55 2</span><span>1 999</span><span>88-3140</span></p>
                   </div>
               </div>
           </div>

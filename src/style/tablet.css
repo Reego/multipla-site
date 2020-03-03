@@ -117,8 +117,15 @@
         /*margin-right:50px;*/
     }
 
+    .footerContact .labels {
+        width:300px;
+    }
 
-    .footerContact > div {
+    .footerBottom .data {
+        width:30%;
+    }
+
+    /*.footerContact > div {
         width:auto;
     }
 
@@ -139,5 +146,5 @@
     .footerBottom h1 {
         margin-left:.5vw;
         text-indent:5vw;
-    }
+    }*/
 }
