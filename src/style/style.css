@@ -156,6 +156,7 @@ html, body {
     z-index:3;
     top:10px;
     cursor:pointer;
+    border:none;
 }
 
 .dropdownWrap input:checked {
