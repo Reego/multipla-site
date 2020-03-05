@@ -235,7 +235,7 @@ html, body {
 
 .subBox .text {
     display:block;
-    width:95%;
+    width:80%;
     margin-left:auto;margin-right:0;
     margin-top:150px;
     text-align:center;
@@ -276,6 +276,12 @@ html, body {
 .subBox .button:hover {
     background-color:rgba(0,0,0,.8);
     color:rgba(255, 255, 255, .8);
+}
+
+.subBox .button a {
+    color:rgba(0,0,0, .9);
+    font-size:18px;
+    font-family:Roboto;
 }
 
 /* Footer content */

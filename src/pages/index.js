@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 
@@ -33,12 +33,12 @@ const Page = ({ data }) => {
             <div className='subBox' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}>
                 <p className='text'>{ displayTitle }</p>
                 <p className='subText'>{ displayText }</p>
-                <div className='button'>Servi&#x00E7;os</div>
+                <div className='button'><Link to='/#servicos'>Servi&#x00E7;os</Link></div>
             </div>
         </div>
         <div style={{'marginTop':'70px'}}></div>
         <div className='mainContent'>
-            <h1 className='contentTitle'>{ servicesTitle }</h1>
+            <h1 id='servicos' className='contentTitle'>{ servicesTitle }</h1>
             <p className='contentDescription'>{ servicesDescription }</p>
             <div className='mainContentServices'>
                 { services }
