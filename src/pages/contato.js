@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 
 import '../style/form.css';
 
+import SEO from '../components/seo';
+
 import Layout from '../components/layout';
 
 const Page = ({ data }) => {
@@ -40,6 +42,9 @@ const Page = ({ data }) => {
 
 export default ({ data }) => (
     <Layout>
+        <SEO>
+            <title>Contato</title>
+        </SEO>
         <Page data={data}/>
     </Layout>
 )

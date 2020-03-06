@@ -16,23 +16,23 @@ collections:
           file: static/assets/config.md
           delete: false
           fields:
-            - { name: homeDisplayTitle, label: "Home Display Title", widget: string, require: true }
-            - { name: homeDisplayText, label: "Home Display Text", widget: string, require: true }
-            - { name: homeDisplayImage, label: "Home Display Image", widget: image, require: true }
-            - { name: homeServicesTitle, label: "Home Services Title", widget: string, require: true }
-            - { name: homeServicesDescription, label: "Home Services Description", widget: string, require: true }
-            - label: "Services"
+            - { name: homeDisplayTitle, label: "Página principal - Título", widget: string, require: true }
+            - { name: homeDisplayText, label: "Página principal - Texto", widget: string, require: true }
+            - { name: homeDisplayImage, label: "Página principal - Imagem", widget: image, require: true }
+            - { name: homeServicesTitle, label: "Serviços - Título", widget: string, require: true }
+            - { name: homeServicesDescription, label: "Serviços - Descrição", widget: string, require: true }
+            - label: "Serviços"
               name: services
               widget: list
               fields:
-                - { name: serviceTitle, label: "Service Title", widget: string, require: true }
-                - { name: serviceDescription, label: "Service Description", widget: string, require: true }
-            - { name: aboutDisplayImage, label: "About Display Image", widget: image, require: true }
-            - { name: aboutText, label: "About Text", widget: string, require: true }
-            - { name: contactDisplayImage, label: "Contact Display Image", widget: image, require: true }
-            - { name: contactText, label: "Contact Text", widget: string, require: true }
-            - { name: sentDisplayImage, label: "Sent Display Image", widget: image, require: true }
-            - { name: sentDisplayText, label: "Sent Display Text", widget: string, require: true }
-            - { name: footerText, label: "Footer Text", widget: string, require: true }
+                - { name: serviceTitle, label: "Serviço - Nome", widget: string, require: true }
+                - { name: serviceDescription, label: "Serviço - Descrição", widget: string, require: true }
+            - { name: aboutDisplayImage, label: "Sobre nós - Imagem", widget: image, require: true }
+            - { name: aboutText, label: "Sobre nós - Texto", widget: string, require: true }
+            - { name: contactDisplayImage, label: "Contato - Imagem", widget: image, require: true }
+            - { name: contactText, label: "Contato - Texto", widget: string, require: true }
+            - { name: sentDisplayImage, label: "Enviado - Imagem", widget: image, require: true }
+            - { name: sentDisplayText, label: "Enviado - Texto", widget: string, require: true }
+            - { name: footerText, label: "Rodapé - Texto", widget: string, require: true }
 
 

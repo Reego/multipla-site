@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
+import SEO from '../components/seo';
+
 import Layout from '../components/layout';
 
 const Page = ({ data }) => {
@@ -50,6 +52,9 @@ const Page = ({ data }) => {
 
 export default ({ data }) => (
     <Layout>
+        <SEO>
+            <title>Multipla</title>
+        </SEO>
         <Page data={data}/>
     </Layout>
 );
