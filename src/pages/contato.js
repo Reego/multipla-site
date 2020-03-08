@@ -23,7 +23,8 @@ const Page = ({ data }) => {
         <p className='contentDescription'>{ text }</p>
         <div className='formBreak'></div>
         <div className='mainForm'>
-            <form className='serviceBoxWide' method='post'{/* action='/enviado'*/} name='Mensagem' data-netlify="true">{/* data-netlify-honeypot="bot-field">*/}
+            {/* action='/enviado'*/}
+            <form className='serviceBoxWide' method='post' name='Mensagem' data-netlify="true">{/* data-netlify-honeypot="bot-field">*/}
                 {/*<input type="hidden" name="bot-field"/>*/}
                 <input type="hidden" name="form-name" value="mensagem" />
                 <h1>Contato</h1>
