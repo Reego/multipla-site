@@ -28,7 +28,7 @@ const Page = ({ data }) => {
                 <h1>Contato</h1>
                 <div className='formBreakSmall'></div>
                 <p className='formText'>Email</p>
-                <input name='email' className='textInput' type='text' placeholder='email' required/>
+                <input type='email' name='email' className='textInput' placeholder='email' required/>
                 <div className='formBreak'></div>
                 <p className='formText'>Mensagem</p>
                 <textarea name='conteudo' rows='5' placeholder='mensagem'></textarea>
