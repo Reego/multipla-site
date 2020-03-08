@@ -24,7 +24,7 @@ const Page = ({ data }) => {
         <div className='formBreak'></div>
         <div className='mainForm'>
             {/* action='/enviado'*/}
-            <form className='serviceBoxWide' method='post' name='mensagems' data-netlify="true">{/* data-netlify-honeypot="bot-field">*/}
+            <form className='serviceBoxWide' method='post' name='mensagems' netlify>{/* data-netlify-honeypot="bot-field">*/}
                 {/*<input type="hidden" name="bot-field"/>*/}
                 <input type="hidden" name="form-name" value="mensagems" />
                 <h1>Contato</h1>
