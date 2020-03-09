@@ -84,7 +84,7 @@ class Page extends React.Component {
             'bot-field': elements['bot-field'].value,
             'form-name': elements['form-name'].value,
             'email': elements['email'].value,
-            'mensagem': elements['mensagem'].value,
+            'conteudo': elements['conteudo'].value,
         }
 
         fetch({
