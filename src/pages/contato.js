@@ -1,21 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 
 import '../style/form.css';
 
 import SEO from '../components/seo';
 
 import Layout from '../components/layout';
-
-import { useEffect } from 'react';
-import { navigate } from 'gatsby';
-
-const SuccessRedirect = () => {
-  useEffect(() => {
-    navigate('/enviado');
-  }, []);
-  return null;
-};
 
 const encode = (data) => {
     return Object.keys(data)
@@ -29,21 +19,24 @@ class Page extends React.Component {
         super(props);
 
         this.state = {
-            'redirect': false
+            'redirect': false,
         };
     }
 
+    componentDidUpdate() {
+        if (this.state.redirect) {
+            navigate('/enviado');
+        }
+    }
+
     render() {
+
         const data = this.props.data
 
-            const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
+        const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
         const displayImage = frontmatter['contactDisplayImage'];
         const text = frontmatter['contactText'];
-
-        if(this.state.redirect) {
-            return SuccessRedirect();
-        }
 
         return (
         <div className='mainContent'>
@@ -103,41 +96,6 @@ class Page extends React.Component {
             });
     }
 }
-
-// const Page = ({ data }) => {
-//     const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
-
-//     const displayImage = frontmatter['contactDisplayImage'];
-//     const text = frontmatter['contactText'];
-
-//     return (
-//     <div className='mainContent'>
-//         <div className='formDescription'>
-//             <div className='formDescriptionImage' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}></div>
-//         </div>
-//         <div className='formBreak'></div>
-//         <h1 className='contentTitle'>Fale connosco</h1>
-//         <p className='contentDescription'>{ text }</p>
-//         <div className='formBreak'></div>
-//         <div className='mainForm'>
-//             {/* action='/enviado'*/}
-//             <form className='serviceBoxWide' method='post' action='/enviado' name='mensagems' data-netlify-honeypot="bot-field" netlify>
-//                 <input type="hidden" name="bot-field"/>
-//                 <input type="hidden" name="form-name" value="mensagems" />
-//                 <h1>Contato</h1>
-//                 <div className='formBreakSmall'></div>
-//                 <p className='formText'>Email</p>
-//                 <input type='email' name='email' className='textInput' placeholder='email' required/>
-//                 <div className='formBreak'></div>
-//                 <p className='formText'>Mensagem</p>
-//                 <textarea name='conteudo' rows='5' placeholder='mensagem'></textarea>
-//                 <div className='formBreak'></div>
-//                 <input className='submitButton' type='submit' value='Submeter'/>
-//             </form>
-//         </div>
-//     </div>
-//     );
-// };
 
 export default ({ data }) => (
     <Layout>
