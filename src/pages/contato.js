@@ -17,6 +17,11 @@ const SuccessRedirect = () => {
   return null;
 };
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+};
 
 class Page extends React.Component {
 
@@ -29,7 +34,7 @@ class Page extends React.Component {
     }
 
     render() {
-        data = this.props.data
+        const data = this.props.data
 
             const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
@@ -51,7 +56,7 @@ class Page extends React.Component {
             <div className='formBreak'></div>
             <div className='mainForm'>
                 {/* action='/enviado'*/}
-                <form onSubmit={(e)=>this.formSubmission.bind(this)} className='serviceBoxWide' method='post' action='/enviado' name='mensagems' data-netlify-honeypot="bot-field" netlify>
+                <form onSubmit={this.formSubmission.bind(this)} className='serviceBoxWide' method='post' action='/enviado' name='mensagems' data-netlify-honeypot="bot-field" netlify>
                     <input type="hidden" name="bot-field"/>
                     <input type="hidden" name="form-name" value="mensagems" />
                     <h1>Contato</h1>
@@ -82,7 +87,7 @@ class Page extends React.Component {
             'mensagem': elements['mensagem'].value,
         }
 
-        await fetch({
+        fetch({
             'method':'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode(form)
@@ -91,7 +96,7 @@ class Page extends React.Component {
                 this.setState(
                 {
                     'redirect': true,
-                })
+                });
             })
             .catch(err => {
 
