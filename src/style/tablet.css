@@ -57,6 +57,10 @@
         display:none;
     }
 
+    .subBox .subText {
+        text-align:center;
+    }
+
     .main {
         width:95vw;
         margin:0 auto;
