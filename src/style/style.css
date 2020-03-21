@@ -417,9 +417,3 @@ html, body {
     margin:0;
     line-height:40px;
 }
-
-@media only screen and (min-width:350) {
-    .subBox {
-        height:600px;
-    }
-}
