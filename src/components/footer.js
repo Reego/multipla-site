@@ -48,10 +48,10 @@ const Footer = (data) => {
                       <p>telefone</p>
                   </div>
                   <div className='data'>
-                      <p><span>apen</span>na<span>@apmultip</span><span>la.com.br</span></p>
-                      <p><span>cferra</span><span>z@apmultipl</span><span>a.com.br</span></p>
-                      <p><span>+55 21</span> 988<span>99-4832</span></p>
-                      <p><span>+55 2</span><span>1 999</span><span>88-3140</span></p>
+                      <p><span>a</span>email<span>@domain</span><span>.com.br</span></p>
+                      <p><span>a</span><span>email@domain</span><span>.com.br</span></p>
+                      <p><span>+00 00</span> 000<span>00-0000</span></p>
+                      <p><span>+00 0</span><span>0 000</span><span>00-0000</span></p>
                   </div>
               </div>
           </div>
