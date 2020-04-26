@@ -1,0 +1,17 @@
+/Add markdown content
+
+/Add toggleability for title as well as description
+
+/right shift text on main page
+
+
+
+/create new config files
+
+/create services pages
+
+Add pictures
+
+cloudinary login
+
+add logo

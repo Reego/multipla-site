@@ -6,17 +6,14 @@ import SEO from '../components/seo';
 import Layout from '../components/layout';
 
 const Page = ({ data }) => {
-    const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
-
-    const subText = frontmatter['sentDisplayText'];
-    const displayImage = frontmatter['sentDisplayImage']
+    const { sentDisplayText, sentDisplayImage } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
     return (
         <React.Fragment>
             <div className='mainDisplay'>
-                <div className='subBox' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}>
+                <div className='subBox' style={{background:"url('" + sentDisplayImage + "')", backgroundSize:'cover'}}>
                     <p className='text'>Obrigado</p>
-                    <p className='subText'>{subText}</p>
+                    <p className='subText'>{ sentDisplayText }</p>
                 </div>
             </div>
         </React.Fragment>
@@ -34,7 +31,7 @@ export default ({ data }) => (
 
 export const query = graphql`
 {
-  allFile(filter: {name: {eq: "config"}}) {
+  allFile(filter: {name: {eq: "contato"}}) {
     edges {
       node {
         name

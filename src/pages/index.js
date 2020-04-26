@@ -6,44 +6,49 @@ import SEO from '../components/seo';
 import Layout from '../components/layout';
 
 const Page = ({ data }) => {
-    const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
+    const {
+        homeDisplayTitle,
+        homeDisplayText,
+        homeDisplayImage,
+        homeServicesTitle,
+        homeServicesTitleActive,
+        homeServicesDescription,
+        homeServicesDescriptionActive,
 
-    const displayTitle = frontmatter['homeDisplayTitle'];
-    const displayText = frontmatter['homeDisplayText'];
-    const displayImage = frontmatter['homeDisplayImage'];
+    } = data.config.edges[0].node.childMarkdownRemark.frontmatter;
 
-    const servicesTitle = frontmatter['homeServicesTitle'];
-    const servicesDescription = frontmatter['homeServicesDescription'];
+    const services = data.services.edges;
 
-    const services = [];
+    const serviceComponents = [];
 
-    for(let i = 0; i < frontmatter['services'].length; i++) {
-        const service = frontmatter['services'][i];
-        services.push(
+    for(let i = 0; i < services.length; i++) {
+        const { serviceName, shortDescription } = services[i].node.frontmatter;
+        serviceComponents.push(
             <div id={'servico_' + i} key={i} className='serviceBox'>
                 <h1 className={
                     (i % 2 === 0) ? 'left' : 'right'
-                }>{ service['serviceTitle'] }</h1>
-                <p>{ service['serviceDescription'] }</p>
+                }>{ serviceName }</h1>
+                <p>{ shortDescription }</p>
             </div>
         );
     }
-    // alert("url('" + displayImage + "");
     return (
     <React.Fragment>
         <div className='mainDisplay'>
-            <div className='subBox' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}>
-                <p className='text'>{ displayTitle }</p>
-                <p className='subText'>{ displayText }</p>
+            <div className='subBox' style={{background:"url('" + homeDisplayImage + "')", backgroundSize:'cover'}}>
+                { homeServicesTitleActive &&
+                    <p className='text'>{ homeDisplayTitle }</p> }
+                { homeServicesDescriptionActive &&
+                    <p className='subText'>{ homeDisplayText }</p> }
                 <div className='button'><Link to='/#servicos'>Servi&#x00E7;os</Link></div>
             </div>
         </div>
         <div style={{'marginTop':'70px'}}></div>
         <div className='mainContent'>
-            <h1 id='servicos' className='contentTitle'>{ servicesTitle }</h1>
-            <p className='contentDescription'>{ servicesDescription }</p>
+            <h1 id='servicos' className='contentTitle'>{ homeServicesTitle }</h1>
+            <p className='contentDescription'>{ homeServicesDescription }</p>
             <div className='mainContentServices'>
-                { services }
+                { serviceComponents }
             </div>
         </div>
     </React.Fragment>
@@ -61,7 +66,7 @@ export default ({ data }) => (
 
 export const query = graphql`
 {
-  allFile(filter: {name: {eq: "config"}}) {
+  config: allFile(filter: {name: {eq: "config"}}) {
     edges {
       node {
         name
@@ -71,14 +76,22 @@ export const query = graphql`
             homeDisplayText
             homeDisplayImage
             homeServicesTitle
+            homeServicesTitleActive
             homeServicesDescription
-            services {
-                serviceTitle
-                serviceDescription
-            }
+            homeServicesDescriptionActive
           }
         }
       }
+    }
+  }
+  services: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/static/assets/services/"}}) {
+    edges {
+        node {
+            frontmatter {
+                serviceName
+                shortDescription
+            }
+        }
     }
   }
 }`;

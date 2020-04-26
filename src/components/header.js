@@ -4,16 +4,11 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 
 const query = graphql`
 {
-  allFile(filter: {name: {eq: "config"}}) {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/static/assets/services/"}}}) {
     edges {
       node {
-        name
-        childMarkdownRemark {
-          frontmatter {
-            services {
-                serviceTitle
-            }
-          }
+        frontmatter {
+          serviceName
         }
       }
     }
@@ -21,22 +16,20 @@ const query = graphql`
 }`;
 
 const Header = (data) => {
-    const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
-
-    const services = frontmatter['services'];
+    const services = data.allFile.edges;
 
     const servicesDropdownList = [];
     const servicesMobileDropdownList = [];
 
     for(let i = 0; i < services.length; i++) {
-        const service = services[i];
+        const service = services[i].node.frontmatter.serviceName;
 
         servicesDropdownList.push(
-            <Link to={'/#servico_' + i} key={i}>{service['serviceTitle']}</Link>
+            <Link to={'/#servico_' + i} key={i}>{ service }</Link>
         );
 
         servicesMobileDropdownList.push(
-            <Link to={'/#servico_' + i} key={i} className='indent'>{service['serviceTitle']}</Link>
+            <Link to={'/#servico_' + i} key={i} className='indent'>{ service }</Link>
         );
     }
 

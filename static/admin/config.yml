@@ -1,18 +1,27 @@
 backend:
   name: github
-  repo: Reego/multipla-site
+  repo: Multiplabr2020/multipla-site
   branch: master
 media_library:
   name: cloudinary
   config:
-    cloud_name: dvfbk5hsh
-    api_key: 371112618454942
+    cloud_name: daepyyc2z
+    api_key: 751955977845989
 collections:
-    - label: Files
+    - name: service
+      label: "Serviço"
+      folder: static/assets/services
+      create: true
+      fields:
+        - { name: "serviceName", label: "Nome do serviço", required: true }
+        - { name: "shortDescription", label: "Descrição geral", widget: markdown, required: true }
+        - { name: "body", label: "Conteúdo", widget: markdown, required: true }
+        - { name: "serviceImage", label: "Imagem principal", widget: image, required: true}
+    - label: "Configuração geral"
       name: file
       files:
         - name: configuration
-          label: "Configuration"
+          label: "Home"
           file: static/assets/config.md
           delete: false
           fields:
@@ -20,19 +29,32 @@ collections:
             - { name: homeDisplayText, label: "Página principal - Texto", widget: string, require: true }
             - { name: homeDisplayImage, label: "Página principal - Imagem", widget: image, require: true }
             - { name: homeServicesTitle, label: "Serviços - Título", widget: string, require: true }
+            - { name: homeServicesTitleActive, label: "Serviços - Título - Ativado", widget: boolean }
             - { name: homeServicesDescription, label: "Serviços - Descrição", widget: string, require: true }
-            - label: "Serviços"
-              name: services
-              widget: list
-              fields:
-                - { name: serviceTitle, label: "Serviço - Nome", widget: string, require: true }
-                - { name: serviceDescription, label: "Serviço - Descrição", widget: string, require: true }
+            - { name: homeServicesDescriptionActive, label: "Serviços - Descrição - Ativado", widget: boolean }
+        - name: sobreNos
+          label: "Sobre nós"
+          file: static/assets/sobre.md
+          delete: false
+          fields:
             - { name: aboutDisplayImage, label: "Sobre nós - Imagem", widget: image, require: true }
-            - { name: aboutText, label: "Sobre nós - Texto", widget: string, require: true }
+            - { name: aboutText, label: "Sobre nós - Texto", widget: markdown, require: true }
+        - name: contato
+          label: "Contato"
+          file: static/assets/contato.md
+          fields:
             - { name: contactDisplayImage, label: "Contato - Imagem", widget: image, require: true }
             - { name: contactText, label: "Contato - Texto", widget: string, require: true }
             - { name: sentDisplayImage, label: "Enviado - Imagem", widget: image, require: true }
             - { name: sentDisplayText, label: "Enviado - Texto", widget: string, require: true }
+        - name: footer
+          label: "Rodapé"
+          file: static/assets/footer.md
+          fields:
             - { name: footerText, label: "Rodapé - Texto", widget: string, require: true }
+            - { name: footerEmailA, label: "Rodapé - Email 1", widget: string, require: true }
+            - { name: footerPhoneA, label: "Rodapé - Telefone 1", widget: string, require: true }
+            - { name: footerEmailB, label: "Rodapé - Email 2", widget: string, require: true }
+            - { name: footerPhoneB, label: "Rodapé - Telefone 2", widget: string, require: true }
 
 

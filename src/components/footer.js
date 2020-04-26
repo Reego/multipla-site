@@ -4,14 +4,15 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 
 const query = graphql`
 {
-  allFile(filter: {name: {eq: "config"}}) {
+  allFile(filter: {name: {eq: "footer"}}) {
     edges {
       node {
-        name
-        childMarkdownRemark {
-          frontmatter {
-              footerText
-          }
+        frontmatter {
+            footerText
+            footerEmailA
+            footerPhoneA
+            footerEmailB
+            footerPhoneB
         }
       }
     }
@@ -19,9 +20,14 @@ const query = graphql`
 }`;
 
 const Footer = (data) => {
-  const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
-  const text = frontmatter['footerText'];
+  const {
+    footerText,
+    footerEmailA,
+    footerPhoneA,
+    footerEmailB,
+    footerPhoneB,
+  } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
   return (
   <div className='footer'>
@@ -37,7 +43,7 @@ const Footer = (data) => {
               </ul>
           </div>
           <div className='footerColumn'>
-              <p>{text}</p>
+              <p>{ footerText }</p>
           </div>
           <div className='footerBottom'>
               <div className='footerContact'>
@@ -48,10 +54,10 @@ const Footer = (data) => {
                       <p>telefone</p>
                   </div>
                   <div className='data'>
-                      <p><span>a</span>email<span>@domain</span><span>.com.br</span></p>
-                      <p><span>a</span><span>email@domain</span><span>.com.br</span></p>
-                      <p><span>+00 00</span> 000<span>00-0000</span></p>
-                      <p><span>+00 0</span><span>0 000</span><span>00-0000</span></p>
+                      <p>{ footerEmailA }</p>
+                      <p>{ footerEmailB }</p>
+                      <p>{ footerPhoneA }</p>
+                      <p>{ footerPhoneB }</p>
                   </div>
               </div>
           </div>

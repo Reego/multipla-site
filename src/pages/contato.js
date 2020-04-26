@@ -33,19 +33,16 @@ class Page extends React.Component {
 
         const data = this.props.data
 
-        const frontmatter = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
-
-        const displayImage = frontmatter['contactDisplayImage'];
-        const text = frontmatter['contactText'];
+        const { contactDisplayImage, contactText } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
         return (
         <div className='mainContent'>
             <div className='formDescription'>
-                <div className='formDescriptionImage' style={{background:"url('" + displayImage + "')", backgroundSize:'cover'}}></div>
+                <div className='formDescriptionImage' style={{background:"url('" + contactDisplayImage + "')", backgroundSize:'cover'}}></div>
             </div>
             <div className='formBreak'></div>
             <h1 className='contentTitle'>Fale connosco</h1>
-            <p className='contentDescription'>{ text }</p>
+            <p className='contentDescription'>{ contactText }</p>
             <div className='formBreak'></div>
             <div className='mainForm'>
                 {/* action='/enviado'*/}
@@ -108,7 +105,7 @@ export default ({ data }) => (
 
 export const query = graphql`
 {
-  allFile(filter: {name: {eq: "config"}}) {
+  allFile(filter: {name: {eq: "contato"}}) {
     edges {
       node {
         name
